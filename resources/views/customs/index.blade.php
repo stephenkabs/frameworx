@@ -222,8 +222,8 @@
                             <a style="font-size: 10px; text-align: left;" class="button button-app animated-btn thispc-btn" href="{{ route('customs.edit', $item->slug) }}">
                                 <b><i style="font-size: 40px;" class="fas fa-clone"></i></b>
                             </a>
-                            <label style="font-size: 10px; color: aliceblue; padding-top: 5px;" for="folder">
-                                <a style="color: white" href="{{ route('customs.edit', $item->slug) }}"><b>{{ $item->title }}</b></a>
+                            <label style="font-size: 10px; color: rgb(47, 47, 47); padding-top: 5px;" for="folder">
+                                <a style="color: rgb(60, 60, 60)" href="{{ route('customs.edit', $item->slug) }}"><b>{{ $item->title }}</b></a>
                             </label>
                         </div>
 

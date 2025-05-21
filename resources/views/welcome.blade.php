@@ -11,13 +11,13 @@
     <meta content="" name="author">
     <!-- CSS Files
     ================================================== -->
-    <link href="/website_style/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="/website_style/css/plugins.css" rel="stylesheet" type="text/css">
-    <link href="/website_style/css/swiper.css" rel="stylesheet" type="text/css">
-    <link href="/website_style/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/website_style/css/coloring.css" rel="stylesheet" type="text/css">
+    <link href="/web_nice/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="/web_nice/css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="/web_nice/css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="/web_nice/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/web_nice/css/coloring.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
-    <link id="colors" href="/website_style/css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="/web_nice/css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 
@@ -118,7 +118,7 @@
 
                     <div class="row g-4">
                         {{-- <div class="col-lg-6" style="position: relative;">
-                            <img src="/website_style/images/projects/1.jpg"
+                            <img src="/web_nice/images/projects/1.jpg"
                                 class="img-fluid rounded-20px wow scaleOut" data-wow-delay=".0s" alt="">
                         </div> --}}
                         @foreach ($background as $item)
@@ -245,11 +245,11 @@ background: linear-gradient(248deg, rgba(171, 93, 3, 0.418) 0%, rgba(254, 185, 1
 
     <!-- Javascript Files
     ================================================== -->
-    <script src="/website_style/js/plugins.js"></script>
-    <script src="/website_style/js/designesia.js"></script>
-    <script src="/website_style/js/swiper.js"></script>
-    <script src="/website_style/js/custom-marquee.js"></script>
-    <script src="/website_style/js/custom-swiper-1.js"></script>
+    <script src="/web_nice/js/plugins.js"></script>
+    <script src="/web_nice/js/designesia.js"></script>
+    <script src="/web_nice/js/swiper.js"></script>
+    <script src="/web_nice/js/custom-marquee.js"></script>
+    <script src="/web_nice/js/custom-swiper-1.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JavaScript for Cookie Pop-up -->
     <script>

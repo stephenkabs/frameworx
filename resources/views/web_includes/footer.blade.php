@@ -1,6 +1,6 @@
 <footer
             style="
-background: linear-gradient(248deg, rgb(131, 64, 6) 0%, rgb(224, 104, 12) 82%);">
+background: linear-gradient(248deg, rgb(131, 64, 6) 0%, rgb(39, 17, 1) 82%);">
             <div class="container">
                 <div class="row gx-5">
                     <!--                     <div class="col-lg-4 col-sm-6">

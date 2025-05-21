@@ -642,8 +642,8 @@
                         </div>
 
                       <!-- Copy and Paste this section for more items -->
-                      {{-- <div class="col-lg-4 col-md-6 mb-4">
-                        <a href="/broadcast" style="text-decoration: none;">
+                      <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="/customs" style="text-decoration: none;">
                             <div class="d-flex align-items-center p-3"
                                 style="background-color: white; border: 1px solid #ccc; border-radius: 10px;">
                                 <div class="icon-container me-3"
@@ -651,13 +651,13 @@
                                     <i class="ion ion-md-film" style="font-size: 24px; color: #555;"></i>
                                 </div>
                                 <div>
-                                    <h6 class="mb-0">Live Broadcasting</h6>
-                                    <p style="font-size: 10px" class="mb-0 text-muted">Broadcast Live YouTube Channels to VM</p>
+                                    <h6 class="mb-0">Custom Pages</h6>
+                                    <p style="font-size: 10px" class="mb-0 text-muted">Manage Customizable Pages</p>
                                 </div>
 
                             </div>
                         </a>
-                    </div> --}}
+                    </div>
 
                         <!-- Add more items as needed -->
                         {{-- <div class="col-lg-4 col-md-6 mb-4">

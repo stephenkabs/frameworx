@@ -87,6 +87,14 @@ class RouteServiceProvider extends ServiceProvider
             return \App\Models\Worker::where('slug', $value)->firstOrFail();
         });
 
+                Route::model('custom', \App\Models\Custom::class);
+
+        // Define how to retrieve the model by slug
+        Route::bind('custom', function ($value) {
+        return \App\Models\Custom::where('slug', $value)->firstOrFail(); });
+
+
+
         Route::model('salary', \App\Models\Salary::class);
 
         // Define how to retrieve the model by slug
@@ -180,6 +188,15 @@ class RouteServiceProvider extends ServiceProvider
         Route::bind('task', function ($value) {
             return \App\Models\Task::where('slug', $value)->firstOrFail();
         });
+
+
+        Route::model('doc', \App\Models\Doc::class);
+
+        // Define how to retrieve the model by slug
+        Route::bind('doc', function ($value) {
+        return \App\Models\Doc::where('slug', $value)->firstOrFail(); });
+
+
 
 
                Route::model('asset', \App\Models\Asset::class);

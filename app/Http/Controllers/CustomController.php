@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Custom;
 use App\Models\Background;
 use App\Models\Hero;
+use App\Models\Menu;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -97,6 +98,7 @@ class CustomController extends Controller
         $generalSettings = Setting::all();
         $background = Background::all();
         $displaySettings = Setting::where('status', 'Published')->get();
+                $menu = Menu::all();
 
     $features = json_decode($custom->features, true) ?? [];
     if (json_last_error() !== JSON_ERROR_NONE) {
@@ -110,7 +112,7 @@ class CustomController extends Controller
             ->get();
 
         // Pass 'ministry', 'similarMinistries', and other variables to the view
-        return view('customs.public_show', compact('custom',  'generalSettings', 'displaySettings', 'heroes',  'documentation','features','background'));
+        return view('customs.public_show', compact('custom',  'generalSettings', 'displaySettings', 'heroes',  'documentation','features','background','menu'));
     }
 
 

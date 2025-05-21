@@ -64,7 +64,7 @@
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        background: linear-gradient(248deg, rgba(190, 203, 8, 0.4) 0%, rgb(4, 62, 98) 70%);
+                        background: linear-gradient(248deg, rgba(190, 203, 8, 0) 0%, rgb(0, 0, 0) 70%);
                         z-index: 1;">
                 </div>
 
@@ -78,7 +78,7 @@
                                 <h3
                                 style="
                                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-                                    background: linear-gradient(90deg, #5ca207, #6db3f9, #0486ff);
+                                    background: linear-gradient(90deg, #32230e, #906442, #bc6b08);
                                     -webkit-background-clip: text;
                                     -webkit-text-fill-color: transparent;
                                     font-weight: bold;

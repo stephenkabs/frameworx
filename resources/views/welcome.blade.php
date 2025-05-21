@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Plus- Official</title>
+    <title>Frameworx - Official</title>
     <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -160,7 +160,7 @@
                         @endforeach
 
 
-                        <div class="spacer-single"></div>
+                        {{-- <div class="spacer-single"></div> --}}
                     </div>
 
                     {{-- <div class="row g-5">
@@ -198,7 +198,7 @@ background: linear-gradient(248deg, rgba(171, 93, 3, 0.418) 0%, rgba(254, 185, 1
                 </div>
             </section>
 
-            <div class="spacer-single"></div>
+            {{-- <div class="spacer-single"></div> --}}
 
             <section class="no-top">
                 <div class="container">

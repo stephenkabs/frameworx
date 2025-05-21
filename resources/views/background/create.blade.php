@@ -63,7 +63,7 @@
                                           <div class="mb-3">
                                               <label class="form-label">Image Type</label>
                                               <select name="type" class="form-select" required>
-                       <select name="type" class="form-select" required>
+
                                                   <option value="" disabled selected>Select Image Type</option>
                                                   <option value="general_hero">Home Hero</option>
                                                   <option value="general_home_about_image">Home About Image</option>

@@ -63,17 +63,24 @@
                                           <div class="mb-3">
                                               <label class="form-label">Image Type</label>
                                               <select name="type" class="form-select" required>
+                       <select name="type" class="form-select" required>
                                                   <option value="" disabled selected>Select Image Type</option>
-                                                  <option value="hero">Hero Slider</option>
+                                                  <option value="general_hero">Home Hero</option>
+                                                  <option value="general_home_about_image">Home About Image</option>
+                                                  <option value="hero">Home Slider</option>
+                                                  <option value="home_about_image">VM About Image</option>
                                                   <option value="login_background">Login Background</option>
-                                                  <option value="about_image">About Image</option>
+                                                  <option value="about_home_image">About Home Image</option>
+                                                  <option value="about_image_hero">About Page Image Hero</option>
+                                                  <option value="about_image_section">About Page Image Section</option>
+                                                  <option value="contact">Contact Page Image Hero</option>
+                                                  <option value="about_image_contact">Contact Page Image Section</option>
+                                                  <option value="custom_page">Custom Page</option>
+                                                  <option value="documentation">Documentation</option>
+                                                  <option value="mobile_logo">Mobile Logo</option>
+                                                  <option value="mobile_hero">Mobile Hero Image</option>
+                                                  <option value="mobile_image">Mobile Image</option>
                                                   <option value="brands">Brands</option>
-                                                  <option value="creatives">Creatives</option>
-                                                  <option value="creatives_section">Creatives Section</option>
-                                                  <option value="cloud">Cloud Computing</option>
-                                                  <option value="business">Business</option>
-                                                  <option value="business_section">Business Section</option>
-                                                  <option value="other">Other</option>
                                               </select>
                                           </div>
 

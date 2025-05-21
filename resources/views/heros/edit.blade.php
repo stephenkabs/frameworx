@@ -114,11 +114,13 @@
                                             id="validationCustom01"
                                             required
                                         >
-                                            <option value="Published" {{ old('status', $hero->status) == 'Published' ? 'selected' : '' }}>Published</option>
-                                            <option value="Unpublished" {{ old('status', $hero->status) == 'Unpublished' ? 'selected' : '' }}>Unpublished</option>
-                                            <option value="Section" {{ old('status', $hero->status) == 'Section' ? 'selected' : '' }}>Section</option>
-                                            <option value="Creative" {{ old('status', $hero->status) == 'Creative' ? 'selected' : '' }}>Creative</option>
-                                            <option value="business" {{ old('status', $hero->status) == 'business' ? 'selected' : '' }}>VM Business</option>
+                                            <option value="general_hero" {{ $hero->status === 'general_hero' ? 'selected' : '' }}>Hero Background Information</option>
+                                            <option value="hero_information" {{ $hero->status === 'hero_information' ? 'selected' : '' }}>VM Here Information</option>
+                                            <option value="Section" {{ $hero->status === 'Section' ? 'selected' : '' }}>About Text</option>
+                                            <option value="developer" {{ $hero->status === 'developer' ? 'selected' : '' }}>Documentation Hero Text</option>
+                                            <option value="about_us" {{ $hero->status === 'about_us' ? 'selected' : '' }}>About Hero Text</option>
+                                            <option value="about_section" {{ $hero->status === 'about_section' ? 'selected' : '' }}>About Text Section</option>
+                                            <option value="contact" {{ $hero->status === 'contact' ? 'selected' : '' }}>Contact Hero Text</option>
                                         </select>
                                     </div>
 

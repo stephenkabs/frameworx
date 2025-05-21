@@ -95,11 +95,13 @@
                                                         <select type="text" name="status" class="form-select" id="validationCustom01"
                                                             placeholder="Enter Project name" required>
 
-                                                            <option value="Published" >Published</option>
-                                                            <option value="Unpublished" >Unpublished</option>
-                                                            <option value="Section">Section</option>
-                                                            <option value="Creative">Creatives</option>
-                                                            <option value="business">VM Business</option>
+                                                      <option value="general_hero" >Hero Background Information</option>
+                                                            <option value="hero_information" >VM Hero Information</option>
+                                                            <option value="Section">Home About Text Section</option>
+                                                            <option value="developer">Documentation Hero Text</option>
+                                                            <option value="about_us">About Page Hero Text</option>
+                                                            <option value="about_section">About Page Text Section</option>
+                                                            <option value="contact">Contact Hero Text</option>
 
 
                                                         </select>

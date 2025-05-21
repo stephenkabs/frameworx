@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>AwCloud</title>
+    <title>About Us</title>
     <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -89,7 +89,7 @@
                                     style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:13px;">
                                     {{ $item->about }}
                                 </p>
-                                <a class="btn-main wow fadeInUp" data-wow-delay=".6s" href="{{ $item->button_link }}">{{ $item->button_name }}</a>
+                                <a style="background-color: #ff8c00; color: #000;"  class="btn-main wow fadeInUp" data-wow-delay=".6s" href="{{ $item->button_link }}">{{ $item->button_name }}</a>
 
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                             <h2 style="font-size: 30px" class="wow fadeInUp">{{ $item->title }}</h2>
                             <p class="wow fadeInUp">{{ $item->about }}</p>
                             <div class="spacer-10"></div>
-                            <a class="btn-main wow fadeInUp" href="/register">About Company</a>
+                            <a style="background-color: #ff8c00; color: #000;" class="btn-main wow fadeInUp" href="/register">About Company</a>
                         </div>
                         @endif
                         @endforeach

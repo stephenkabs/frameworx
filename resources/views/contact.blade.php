@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>AwCloud</title>
+    <title>Contact Us</title>
     <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -91,7 +91,7 @@
                                             style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:13px;">
                                             {{ $item->about }}
                                         </p>
-                                        <a class="btn-main wow fadeInUp" data-wow-delay=".6s"
+                                        <a  style="background-color: #ff8c00; color: #000;" class="btn-main wow fadeInUp" data-wow-delay=".6s"
                                             href="{{ $item->button_link }}">{{ $item->button_name }}</a>
 
                                     </div>

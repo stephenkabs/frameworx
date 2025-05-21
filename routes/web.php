@@ -49,6 +49,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SolutionController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\CustomController;
 use App\Http\Controllers\TerminalController;
 use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\UserController;
@@ -139,8 +140,10 @@ Route::get('/merge', function () {
     Route::resource('branches', BranchController::class);
     Route::resource('worker', WorkerController::class);
     Route::resource('salaries', SalaryController::class);
+    Route::resource('customs', CustomController::class);
     Route::resource('leave', LeaveController::class);
     Route::resource('quotations', QuotationController::class);
+
     Route::get('/quotations/{slug}/send', [QuotationController::class, 'sendEmail'])->name('quotations.sendEmail');
 
     Route::resource('client', ClientController::class);
@@ -424,7 +427,7 @@ Route::controller(NavigateController::class)->group(function () {
     });
 
     Route::get('doc/public/{doc}', [DocController::class, 'public_show'])->name('doc.public_show');
-
+Route::get('customs/public/{custom}', [CustomController::class, 'public_show'])->name('customs.public_show');
 
 
 

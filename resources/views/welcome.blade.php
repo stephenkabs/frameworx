@@ -163,7 +163,7 @@
                         <div class="spacer-single"></div>
                     </div>
 
-                    <div class="row g-5">
+                    {{-- <div class="row g-5">
                         <div class="col-lg-6 wow fadeInLeft">
                             <div class="padding40 bg-grey rounded-30 h-100">
                                 <h3 class="mb-4">Challenges</h3>
@@ -194,7 +194,7 @@ background: linear-gradient(248deg, rgba(171, 93, 3, 0.418) 0%, rgba(254, 185, 1
                                 </ol>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </section>
 

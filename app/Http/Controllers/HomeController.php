@@ -56,6 +56,7 @@ class HomeController extends Controller
         $solution = Solution::all();
         $overview = Overview::all();
         $background = Background::all();
+                $menu = Menu::all();
 
         // Fetch two different sets of settings
         $generalSettings = Setting::where('status', 'Published')->get();
@@ -69,7 +70,7 @@ class HomeController extends Controller
             return view('mobile_welcome', compact('generalSettings'));
         }
 
-        return view('about_us', compact('generalSettings','heroes','solution','overview','background'));
+        return view('about_us', compact('generalSettings','heroes','solution','overview','background','menu'));
     }
 
 
@@ -108,6 +109,7 @@ class HomeController extends Controller
         $overview = Overview::all();
         $background = Background::all();
         $detail = Detail::all();
+                $menu = Menu::all();
 
         // Fetch two different sets of settings
         $generalSettings = Setting::where('status', 'Published')->get();
@@ -121,7 +123,7 @@ class HomeController extends Controller
             return view('mobile_welcome', compact('generalSettings'));
         }
 
-        return view('contact', compact('generalSettings','heroes','solution','overview','background','documentation','detail'));
+        return view('contact', compact('generalSettings','heroes','solution','overview','background','documentation','detail','menu'));
     }
 
 

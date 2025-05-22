@@ -159,9 +159,9 @@
 
                                 <div class="spacer-single"></div>
 
-                                <div class="fw-bold text-dark"><i class="icofont-phone me-2 id-color-2"></i>Call Us
+                                {{-- <div class="fw-bold text-dark"><i class="icofont-phone me-2 id-color-2"></i>Call Us
                                     Directly</div>
-                                {{ $item->phone }}
+                                {{ $item->phone }} --}}
 
                                 <div class="spacer-single"></div>
                             </div>

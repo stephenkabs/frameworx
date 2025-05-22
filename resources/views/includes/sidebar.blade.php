@@ -111,13 +111,14 @@
                         <span style="font-size: 14px"><b>Ai Automates Apps</b></span>
                     </a>
                 </li>
-
+@role('admin')
                 <li>
                     <a href="/restricted/developer_dashboard" class="waves-effect">
                         <i class="dripicons-gear"></i>
                         <span style="font-size: 14px"><b>General Settings</b></span>
                     </a>
                 </li>
+                @endrole
 
 <br>
 <li style="background-color: rgb(66, 103, 153); border-radius: 40px;">

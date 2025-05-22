@@ -32,7 +32,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="fas fa-arrow-circle-down"></i>
-                        <span style="font-size: 14px"> <b>Excel Statements</b> </span>
+                        <span style="font-size: 14px"> <b>HR Excel Reports</b> </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('payslip_normal.exportToExcel') }}"><span style="font-size: 14px">Monthly Report</a></span></li>

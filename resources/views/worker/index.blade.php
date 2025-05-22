@@ -129,7 +129,7 @@
 
 
                         <!-- Add more items as needed -->
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        {{-- <div class="col-lg-4 col-md-6 mb-4">
                             <a href="/employee/employee_profiles" style="text-decoration: none;">
                                 <div class="d-flex align-items-center p-3"
                                     style="background-color: white; border: 1px solid #ccc; border-radius: 10px;">
@@ -143,7 +143,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </div> --}}
 
                         <!-- Add more items as needed -->
                         <div class="col-lg-4 col-md-6 mb-4">
@@ -164,7 +164,7 @@
 
 
                         <!-- Add more items as needed -->
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        {{-- <div class="col-lg-4 col-md-6 mb-4">
                             <a href="/contracts" style="text-decoration: none;">
                                 <div class="d-flex align-items-center p-3"
                                     style="background-color: white; border: 1px solid #ccc; border-radius: 10px;">
@@ -178,7 +178,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </div> --}}
 
 
 

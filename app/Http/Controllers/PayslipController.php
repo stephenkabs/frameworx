@@ -51,7 +51,7 @@ class PayslipController extends Controller
         $userId = auth()->id();
         $profileData = User::find($id);
         $salary = Salary::where('user_id', $userId)->get();
-        $detail = Detail::all();
+        $detail = Detail::where('user_id', Auth::id())->get(); // Fetch the results
 
         return view('payslip.create', compact('profileData','salary','detail'));
     }

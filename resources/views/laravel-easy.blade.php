@@ -1,146 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevNest Troubleshooting FAQ</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2rem; }
-    header { padding: 1rem 0; }
-    #logo img { max-height: 50px; display: inline-block; }
-    #mainmenu { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; }
-    #mainmenu li { position: relative; }
-    #mainmenu li ul { position: absolute; top: 100%; left: 0; background: #fff; list-style: none; padding: 0.5rem; display: none; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    #mainmenu li:hover ul { display: block; }
-    .menu-item { text-decoration: none; color: #333; font-size: 14px; }
-    .menu-item:hover { color: #0a9be3; }
-    .btn-main { background-color: #ff8c00; color: #000; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; }
-    .pro-tip { background: #eef9ff; border-left: 4px solid #2a7ae2; padding: 1rem; margin-top: 2rem; }
-  </style>
+    <title>Contact Us</title>
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="CoolAir — Air Conditioner & HVAC Repair Website Template" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files
+    ================================================== -->
+    <link href="/web_nice/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="/web_nice/css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="/web_nice/css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="/web_nice/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/web_nice/css/coloring.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="/web_nice/css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+
 </head>
+
 <body>
-
-  <!-- header begin -->
-  <header class="transparent scroll-light has-topbar">
-    <div class="container">
-      <div class="de-flex">
-        <div id="logo">
-          <a href="{{ url('/') }}">
-            @foreach($generalSettings as $item)
-              <img class="logo-main"   src="/settings/logo_white/{{ $item->file }}"  alt="logo" />
-              <img class="logo-scroll" src="/settings/logo_dark/{{ $item->image }}" alt="logo" />
-              <img class="logo-mobile" src="/settings/logo_dark/{{ $item->image }}" alt="logo" />
-            @endforeach
-          </a>
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
         </div>
-        <nav class="de-flex-col header-col-mid">
-          <ul id="mainmenu">
-            <li><a class="menu-item" href="{{ url('/') }}">Home</a></li>
+        <div class="scrollbar-v show-on-scroll"></div>
 
-            @php
-              $subItems = $menu->where('type','sub_menu');
-            @endphp
-            @if($subItems->isNotEmpty())
-              <li>
-                <a class="menu-item" href="#">Products</a>
-                <ul>
-                  @foreach($subItems as $item)
-                    <li><a class="menu-item" href="{{ $item->link }}">{{ $item->sub_name }}</a></li>
-                  @endforeach
-                </ul>
-              </li>
-            @endif
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
 
-            @foreach($menu as $item)
-              @if($item->type==='main_menu')
-                <li><a class="menu-item" href="{{ $item->link }}">{{ $item->menu_name }}</a></li>
-              @endif
-            @endforeach
-          </ul>
-        </nav>
-        <div class="de-flex-col">
-          <a href="{{ route('login') }}" class="btn-main">Login</a>
-          <span id="menu-btn"></span>
-        </div>
+        @include('web_includes.header')
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+
+            <div id="top"></div>
+
+            <section class="pt70 jarallax section-dark text-light" style="position: relative;">
+                <!-- Image Slider -->
+                <div class="swiper-container jarallax-img"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    <div class="swiper-wrapper">
+                        @foreach ($background as $item)
+                            @if ($item->type == 'contact')
+                                <div class="swiper-slide">
+                                    <img src="/background_images/{{ $item->image }}" alt="Background 1"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            @endif
+                        @endforeach
+
+                    </div>
+                </div>
+
+                <!-- Gradient Shade -->
+                <div
+                    style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        /* background: linear-gradient(38deg, rgb(29, 71, 149) 0%, rgb(4, 92, 101) 0%, rgba(207, 117, 6, 0.613) 52%, rgba(185,252,69,0.48365283613445376) 100%); */
+                                                background: linear-gradient(248deg, rgba(190, 203, 8, 0) 0%, rgb(0, 0, 0) 70%);
+                        z-index: 1;">
+                </div>
+
+
+
+
+
+                <!-- Content -->
+                <div class="container relative z-index-1000" style="position: relative;">
+                    <div class="spacer-double sm-hide"></div>
+                    <div class="row g-4 gx-5 align-items-center">
+                        @foreach ($heroes as $item)
+                            @if ($item->status == 'contact')
+                                <div class="col-lg-6 relative">
+                                    <div class="relative z-index-1000">
+                                        <h3
+                                            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+                                            {{ $item->title }}
+                                        </h3>
+                                        <p class="wow fadeInUp" data-wow-delay=".4s"
+                                            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:13px;">
+                                            {{ $item->about }}
+                                        </p>
+                                        <a  style="background-color: #ff8c00; color: #000;" class="btn-main wow fadeInUp" data-wow-delay=".6s"
+                                            href="{{ $item->button_link }}">{{ $item->button_name }}</a>
+
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+            </section>
+
+            <!-- Swiper JS Initialization -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    new Swiper('.swiper-container', {
+                        loop: true,
+                        autoplay: {
+                            delay: 20000,
+                            disableOnInteraction: false,
+                        },
+                        effect: 'fade', // Adds a smooth fade effect
+                        speed: 1000,
+                    });
+                });
+            </script>
+
+
+
+
+
+@php
+  $faqs = [
+    ['title'=>'❌ SSH login failed',
+     'body'=>'DevNest couldn’t connect to your server as <code>azureuser</code>.<br>
+      • Verify server IP/hostname.<br>
+      • Check your PEM key and permissions (chmod 600).<br>
+      • Test manually: <code>ssh -i key.pem azureuser@your-server-ip</code>.'],
+    ['title'=>'“Please close the channel (1) before trying to open it again.”',
+     'body'=>'Only one SSH channel at a time is allowed.<br>
+      • Call <code>$ssh->disconnect()</code> before opening SFTP or a new SSH2 instance.'],
+    ['title'=>'autoload.php missing',
+     'body'=>'Your <code>vendor/autoload.php</code> isn’t there.<br>
+      • Run <code>composer install</code> on the server.<br>
+      • Ensure PHP & git are installed.'],
+    ['title'=>'.env invalid or missing',
+     'body'=>'• Confirm <code>.env</code> exists and is readable by <code>www-data</code>.<br>
+      • No stray whitespace in your stub; wrap multi‑word values in quotes.'],
+    ['title'=>'Access denied for user “laravel_user”',
+     'body'=>'• Double‑check MySQL grants.<br>
+      • Test: <code>mysql -u laravel_user -p</code> then <code>SHOW DATABASES;</code>.'],
+    ['title'=>'404 after deployment',
+     'body'=>'• Ensure vhost is enabled:<br>
+       <code>sudo a2ensite your-app.conf && sudo systemctl reload apache2</code>.<br>
+      • Confirm <code>ServerName</code> matches your domain.'],
+    ['title'=>'SSL errors',
+     'body'=>'• Install Certbot: <code>sudo apt install certbot python3-certbot-apache</code>.<br>
+      • Verify DNS A/AAAA records point to your server.'],
+  ];
+@endphp
+
+<section>
+  <div class="container">
+    {{-- About the App --}}
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <h2>About Laravel‑Easy Deploy</h2>
+        <p>
+          <strong>Laravel‑Easy Deploy</strong> is your all‑in‑one Laravel app manager—
+          push code, provision databases, configure SSL, and run commands, all in one place.
+        </p>
+        <ul>
+          <li>🚀 GitHub → any server</li>
+          <li>🔐 One‑click SSL</li>
+          <li>🐘 Auto MySQL setup</li>
+          <li>🔧 SSH commands</li>
+          <li>📦 Composer, Redis, Queues</li>
+          <li>🌐 Apache vhosts</li>
+          <li>🛠️ Smart .env injection</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        {{-- Placeholder for image or diagram --}}
       </div>
     </div>
-  </header>
-  <!-- header close -->
 
-  <h1>DevNest Troubleshooting FAQ</h1>
-
-  <h2>1. ❌ SSH login failed</h2>
-  <p><strong>Q:</strong> I see “❌ SSH login failed.” in the UI. What went wrong?<br>
-  <strong>A:</strong> DevNest couldn’t connect to your server as <code>azureuser</code>.<br>
-  &bull; Verify the server’s IP/hostname is correct.<br>
-  &bull; Ensure your PEM key matches <code>~/.ssh/authorized_keys</code> and is <code>chmod 600</code> on the VM.<br>
-  &bull; Test manually:<br>
-  <code>ssh -i /path/to/key.pem azureuser@your-server-ip</code>
-  </p>
-
-  <h2>2. “Please close the channel (1) before trying to open it again.”</h2>
-  <p><strong>Q:</strong> I get “Error: Please close the channel (1)…“ during database provisioning.<br>
-  <strong>A:</strong> Net‑SSH only allows one SFTP or exec channel per connection at a time.<br>
-  &bull; Make sure each phase (DB creation, env upload, migrations) uses a fresh <code>new SSH2(...)</code> instance or call <code>$ssh->disconnect()</code> before switching to SFTP.
-  </p>
-
-  <h2>3. “Failed to open stream: No such file or directory” (autoload.php)</h2>
-  <p><strong>Q:</strong> I’m seeing errors about <code>vendor/autoload.php</code> missing.<br>
-  <strong>A:</strong> Composer never ran or failed.<br>
-  &bull; Ensure your provision script includes:<br>
-  <code>cd /path/to/app && composer install --no-interaction --prefer-dist</code><br>
-  &bull; Install prerequisites on the server:<br>
-  <code>sudo apt update && sudo apt install php-cli git unzip curl -y</code>
-  </p>
-
-  <h2>4. ⚠️ “.env file not found” or parsing errors</h2>
-  <p><strong>Q:</strong> DevNest reports “.env file not found” or my app errors say “The environment file is invalid.”<br>
-  <strong>A:</strong>
-  &bull; Check file permissions: <code>storage/</code> and <code>bootstrap/cache/</code> must be writable by Apache (<code>www-data</code>).<br>
-  &bull; Ensure your stub <code>env-template.stub</code> has no unescaped spaces (wrap values in quotes if needed).
-  </p>
-
-  <h2>5. “Access denied for user ‘laravel_user’” in migrations</h2>
-  <p><strong>Q:</strong> Migrations fail with “Access denied for user ‘laravel_user’.”<br>
-  <strong>A:</strong>
-  &bull; Verify the MySQL user and privileges in the provisioning log.<br>
-  &bull; Test on the VM:<br>
-  <code>mysql -u laravel_user -p<br>
-  SHOW DATABASES;</code>
-  </p>
-
-  <h2>6. SSL / Certbot errors</h2>
-  <p><strong>Q:</strong> SSL installation reports “command not found” or a DNS NXDOMAIN error.<br>
-  <strong>A:</strong>
-  &bull; Install Certbot:<br>
-  <code>sudo apt install certbot python3-certbot-apache -y</code><br>
-  &bull; Ensure your domain’s DNS A/AAAA record points to the server’s IP before running Certbot.
-  </p>
-
-  <h2>7. “404 Not Found” after deployment</h2>
-  <p><strong>Q:</strong> My domain serves a 404 even though DevNest says “deployed”.<br>
-  <strong>A:</strong>
-  &bull; Check that the vhost file is present and enabled:<br>
-  <code>ls /etc/apache2/sites-available<br>
-  sudo a2ensite your-app.conf<br>
-  sudo systemctl reload apache2</code><br>
-  &bull; Confirm the <code>ServerName</code> in the vhost matches your domain exactly.
-  </p>
-
-  <h2>8. Quick Deploy webhook not firing</h2>
-  <p><strong>Q:</strong> “Quick Deploy” pushes aren’t updating my server.<br>
-  <strong>A:</strong>
-  &bull; Verify GitHub webhook URL: <code>/webhook/github/{slug}</code> is publicly reachable.<br>
-  &bull; Make sure the webhook secret matches <code>GITHUB_WEBHOOK_SECRET</code> in DevNest’s <code>.env</code>.<br>
-  &bull; Check DevNest’s API logs for incoming payloads.
-  </p>
-
-  <div class="pro-tip">
-    🔍 <strong>Pro Tip:</strong>
-    When you see a 500 error, always start by tailing the logs on your VM:<br>
-    <code>sudo tail -n 50 /var/www/html/your-app/storage/logs/laravel.log</code><br>
-    <code>sudo tail -n 50 /var/log/apache2/error.log</code>
+    {{-- FAQ Accordion --}}
+    <div class="row g-4 gx-5">
+      <div class="col-lg-6">
+        @foreach($faqs as $i => $faq)
+          <div class="accordion mb-3">
+            <div class="accordion-header" onclick="toggleAccordion({{ $i }})">
+              {{ $faq['title'] }}
+            </div>
+            <div class="accordion-body" id="body-{{ $i }}">
+              <p>{!! $faq['body'] !!}</p>
+            </div>
+          </div>
+        @endforeach
+      </div>
+      <div class="col-lg-6">
+        {{-- Future content here --}}
+      </div>
+    </div>
   </div>
+</section>
 
+<script>
+  function toggleAccordion(i) {
+    const hdr = document.querySelectorAll('.accordion-header')[i];
+    const body = document.getElementById(`body-${i}`);
+    hdr.classList.toggle('active');
+    body.style.maxHeight = hdr.classList.contains('active')
+      ? body.scrollHeight + 'px'
+      : null;
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.accordion-body')
+            .forEach(b => b.style.maxHeight = null);
+  });
+</script>
+
+<style>
+  .accordion { background:#fff; border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+  .accordion-header { padding:1rem; cursor:pointer; position:relative; }
+  .accordion-header::after { content:'+'; position:absolute; right:1rem; transition:transform .2s; }
+  .accordion-header.active::after { transform:rotate(45deg); }
+  .accordion-body { max-height:0; overflow:hidden; transition:max-height .3s ease; padding:0 1rem; }
+  .accordion-body p { margin:1rem 0; }
+</style>
+
+
+        </div>
+
+        <!-- content close -->
+
+        <!-- footer begin -->
+        @include('web_includes.footer')
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="/web_nice/js/plugins.js"></script>
+    <script src="/web_nice/js/designesia.js"></script>
+    <script src="/web_nice/js/swiper.js"></script>
+    <script src="/web_nice/js/custom-marquee.js"></script>
+    <script src="/web_nice/js/custom-swiper-1.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- JavaScript for Cookie Pop-up -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cookieConsent = document.getElementById("cookieConsent");
+            const acceptCookies = document.getElementById("acceptCookies");
+
+            // Check if the user already accepted cookies
+            if (!localStorage.getItem("cookiesAccepted")) {
+                cookieConsent.style.display = "block";
+            }
+
+            // Handle the accept button
+            acceptCookies.addEventListener("click", function() {
+                localStorage.setItem("cookiesAccepted", "true");
+                cookieConsent.style.display = "none";
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -115,15 +115,32 @@ class HomeController extends Controller
         $generalSettings = Setting::where('status', 'Published')->get();
         $displaySettings = Setting::where('status', 'Published')->get();
 
-        $agent = new Agent();
 
-        if ($agent->isMobile()) {
-            // Load a separate view for mobile devices
-            // return view('mobile_welcome', compact('heroes', 'generalSettings', 'displaySettings','update','news','contact','broadcasts','quicks','leaders','similarMinistries','donate','us'));
-            return view('mobile_welcome', compact('generalSettings'));
-        }
+
 
         return view('contact', compact('generalSettings','heroes','solution','overview','background','documentation','detail','menu'));
+    }
+
+
+
+    public function easy()
+
+    {
+        // Fetch heroes data
+        $heroes = Hero::all();
+        $documentation = Doc::all();
+        $solution = Solution::all();
+        $overview = Overview::all();
+        $background = Background::all();
+        $detail = Detail::all();
+                $menu = Menu::all();
+
+        // Fetch two different sets of settings
+        $generalSettings = Setting::where('status', 'Published')->get();
+        $displaySettings = Setting::where('status', 'Published')->get();
+
+
+        return view('laravel-easy', compact('generalSettings','heroes','solution','overview','background','documentation','detail','menu'));
     }
 
 

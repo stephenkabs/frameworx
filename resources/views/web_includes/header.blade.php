@@ -38,7 +38,7 @@
                                     @endphp
                                     @if ($companyItems->isNotEmpty())
                                         <li><a class="menu-item"
-                                                href="#">Solutions</a>
+                                                href="#">Products</a>
                                             <ul>
 
                                                 @foreach ($companyItems as $item)

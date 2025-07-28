@@ -73,7 +73,7 @@
                     <div class="spacer-double sm-hide"></div>
                     <div class="row g-4 gx-5 align-items-center">
                         @foreach ($heroes as $item)
-                        @if ($item->status == 'Published')
+                        @if ($item->status == 'general_hero')
                         <div class="col-lg-6 relative">
                             <div class="relative z-index-1000">
                                 <h3

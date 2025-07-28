@@ -140,7 +140,7 @@ class HomeController extends Controller
         $displaySettings = Setting::where('status', 'Published')->get();
 
 
-        return view('laravel-easy', compact('generalSettings','heroes','solution','overview','background','documentation','detail','menu'));
+        return view('laravel_easy', compact('generalSettings','heroes','solution','overview','background','documentation','detail','menu'));
     }
 
 

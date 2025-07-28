@@ -124,7 +124,7 @@
 @php
   $faqs = [
     ['title'=>'❌ SSH login failed',
-     'body'=>'DevNest couldn’t connect to your server as <code>azureuser</code>.<br>
+     'body'=>'Laravel Easy couldn’t connect to your server as <code>azureuser</code>.<br>
       • Verify server IP/hostname.<br>
       • Check your PEM key and permissions (chmod 600).<br>
       • Test manually: <code>ssh -i key.pem azureuser@your-server-ip</code>.'],
@@ -155,7 +155,7 @@
   <div class="container">
     {{-- About the App --}}
     <div class="row mb-5">
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         <h2>About Laravel‑Easy Deploy</h2>
         <p>
           <strong>Laravel‑Easy Deploy</strong> is your all‑in‑one Laravel app manager—
@@ -171,14 +171,14 @@
           <li>🛠️ Smart .env injection</li>
         </ul>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         {{-- Placeholder for image or diagram --}}
       </div>
     </div>
 
     {{-- FAQ Accordion --}}
     <div class="row g-4 gx-5">
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         @foreach($faqs as $i => $faq)
           <div class="accordion mb-3">
             <div class="accordion-header" onclick="toggleAccordion({{ $i }})">
@@ -190,7 +190,7 @@
           </div>
         @endforeach
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         {{-- Future content here --}}
       </div>
     </div>

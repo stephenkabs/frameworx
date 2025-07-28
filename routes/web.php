@@ -404,7 +404,7 @@ Route::controller(NavigateController::class)->group(function () {
                 Route::get('/guide', 'guide')->name('guide');
     Route::get('/contact', 'contact')->name('contact');
         Route::get('/event_register', 'events')->name('event_register');
-        Route::get('/laravel-easy', 'easy')->name('laravel-easy');
+        Route::get('/laravel_easy', 'easy')->name('laravel_easy');
         Route::get('/church_projects', 'projects')->name('church_projects');
         Route::get('/contacts', 'contacts')->name('contacts');
         Route::get('/program_church', 'program_church')->name('program_church');

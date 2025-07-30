@@ -6,7 +6,7 @@
     <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="CoolAir — Air Conditioner & HVAC Repair Website Template" name="description">
+    <meta content="Frameworx Tech" name="description">
     <meta content="" name="keywords">
     <meta content="" name="author">
     <!-- CSS Files

@@ -67,7 +67,7 @@
                                         <!-- Email -->
                                         <div class="mb-3 position-relative">
                                             <label class="form-label">Email</label>
-                                            <input name="email" type="email" class="form-control" readonly value="{{ $user->email }}" required />
+                                            <input name="email" type="email" class="form-control"  value="{{ $user->email }}" required />
                                         </div>
 
                                         <!-- City -->
